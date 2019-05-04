@@ -40,7 +40,7 @@ def scale_back(bounding_box,scale):
 def scale_point_back(point,scale):
     (x,y)= point
     x= int(x / scale)
-    y= int(y/ scale)
+    y= int(y / scale)
     return x,y
 
 def shape_to_np(shape):
@@ -55,6 +55,8 @@ def add_sungass(image,center_point,width):
     center_x,center_y=center_point
     start_x=int(center_x-width/2)
     start_y=int(center_y-height/2)
+	bbb= 111
+	aaa= 222
     sun_glass = cv2.resize(sun_glass, (width,height), interpolation=cv2.INTER_AREA)
     image[start_y:start_y+height,start_x:start_x+width]=sun_glass
 
@@ -88,6 +90,8 @@ while True: # 此行确保是活动窗口，不断调用
             break
 video_capture.release()
 cv2.destroyAllWindows()
+
+### 来看看改了什么
 
 
 
